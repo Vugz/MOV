@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOV</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M43.5729 40.0997L43.5614 35.1792L41.1479 39.2328H40.2926L37.8907 35.2844V40.0997H36.1094V31.8989H37.679L40.7476 36.9951L43.7702 31.8989H45.3283L45.3513 40.0997H43.5729V40.0997Z" fill="white"/>
+            <path d="M46.7827 36C46.7827 33.5635 48.6806 31.7592 51.2698 31.7592C53.8474 31.7592 55.7568 33.552 55.7568 36C55.7568 38.448 53.8474 40.2408 51.2698 40.2408C48.6806 40.2408 46.7827 38.4365 46.7827 36ZM53.8358 36C53.8358 34.4419 52.7342 33.3763 51.2698 33.3763C49.8053 33.3763 48.7037 34.4419 48.7037 36C48.7037 37.5581 49.8053 38.6237 51.2698 38.6237C52.7342 38.6237 53.8358 37.5581 53.8358 36Z" fill="white"/>
+            <path d="M64.8 31.9003L61.2504 40.1011H59.3755L55.8374 31.9003H57.888L60.3835 37.7583L62.9136 31.9003H64.8V31.9003Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.3085 26.7926C23.469 26.843 19.1994 27.7128 19.1994 27.7128C19.1994 27.7128 15.5979 31.9147 15.7376 31.8513C16.4216 31.5417 19.7883 29.0131 20.1541 28.859C20.4853 28.7193 22.8483 29.0275 23.5467 29.0275C24.2451 29.0304 24.981 26.83 24.3085 26.7926Z" fill="url(#paint0_linear_1924_29)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.3085 26.7926C23.469 26.843 19.1994 27.7128 19.1994 27.7128C19.1994 27.7128 15.5979 31.9147 15.7376 31.8513C16.4216 31.5417 19.7883 29.0131 20.1541 28.859C20.4853 28.7193 22.8483 29.0275 23.5467 29.0275C24.2451 29.0304 24.981 26.83 24.3085 26.7926Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5468 29.0289C23.8794 29.0289 24.2207 28.5292 24.4137 28.0008C24.405 27.9921 24.3993 27.9864 24.3993 27.9864L19.9684 27.9388L15.8025 31.8182V31.8196C16.6118 31.3977 19.797 29.0102 20.1527 28.8604C20.4854 28.7193 22.8484 29.0275 23.5468 29.0289Z" fill="#CCCCCC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5124 33.526C25.4476 33.4713 25.3353 33.4008 25.1826 33.3302C24.6585 33.3849 24.1242 33.3273 23.6087 33.2006L23.2689 33.8745C24.5087 33.7377 25.5196 34.4044 25.5311 34.3396C25.5441 34.2662 25.5124 33.526 25.5124 33.526ZM23.099 33.0825C22.5374 33.179 21.9239 33.418 21.3047 33.886C16.9991 37.1419 17.4095 32.9673 12.8015 35.7192L12.9902 36.4593C13.3977 36.1339 13.8858 35.8012 14.6778 35.5982C15.7463 35.3246 17.8228 36.2606 19.535 35.9726C21.0527 35.7177 21.3782 34.6089 22.4193 34.1078L23.099 33.0825Z" fill="#606060"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6859 26.7969C25.2849 27.6206 24.5491 29.0721 23.6419 29.2795C24.1445 30.2169 24.0235 31.2365 23.7182 32.1019C23.9457 32.1422 24.1776 32.1609 24.4209 32.1537C25.0603 32.135 25.691 31.9953 26.2497 31.6742C26.4182 31.5777 26.5766 31.4669 26.7264 31.3416C26.8099 31.2725 26.8977 31.1832 26.9827 31.1213C27.0331 30.8419 27.0561 30.5683 27.0403 30.3105C26.9395 28.656 24.6859 26.7969 24.6859 26.7969ZM23.2632 33.1041C22.9896 33.5981 22.7174 33.9609 22.6094 34.1035C22.0723 34.812 22.6137 35.699 23.2358 36.1051C24.5923 36.9893 27.5256 37.0757 28.5667 37.044C25.6795 39.1968 25.1366 45.4838 25.1409 45.4752C27.5817 39.6173 30.4689 37.3982 30.6201 37.1232C31.5389 35.4384 26.1057 33.6398 25.6291 34.3094C25.6291 34.3094 25.9862 33.7565 26.3433 32.9976C26.2137 33.0624 26.0827 33.1185 25.9574 33.1617C25.0805 33.4627 24.1373 33.3749 23.2632 33.1041Z" fill="white"/>
+            <path d="M24.2669 33.3201C23.927 33.2812 23.5901 33.2049 23.2632 33.1041C22.9896 33.598 22.7174 33.9609 22.6094 34.1035C22.0723 34.812 22.6137 35.699 23.2358 36.1051C24.5923 36.9892 27.5256 37.0756 28.5667 37.044C25.7357 39.155 25.1597 45.2419 25.1409 45.468H25.1424C25.1424 45.468 26.4355 41.302 27.2966 39.7209C28.1592 38.1412 29.5949 36.8481 29.5949 36.8481C29.5949 36.8481 24.8544 36.1296 24.1358 35.411C23.7542 35.0265 23.9429 34.236 24.2669 33.3201Z" fill="#CCCCCC"/>
+            <path d="M23.6418 29.2795C24.1444 30.2169 24.0234 31.2364 23.7182 32.1019C23.9457 32.1422 24.1775 32.1609 24.4209 32.1537C24.5174 32.1508 24.6138 32.1436 24.7089 32.135C24.8759 31.6857 25.0343 31.2364 25.1409 30.8116C25.4274 29.6668 25.0055 28.7971 24.6916 28.342C24.4641 28.8014 24.0738 29.1816 23.6418 29.2795Z" fill="#CCCCCC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5949 35.9827C23.0975 36.5717 24.9608 37.1333 25.0141 37.0008C25.0674 36.8683 21.5192 41.6074 20.6092 42.4872C19.7048 43.3627 14.7786 47.0837 14.0024 48.1911C13.8714 48.3783 17.5492 42.1503 19.9612 41.0616C20.9908 39.3898 21.5639 37.6546 22.5949 35.9827Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5801 27.2938C26.1906 27.5487 29.4119 28.7583 29.4119 28.7583C29.4119 28.7583 33.1041 25.7155 33.0278 25.8941C32.9514 26.0727 30.2126 29.8973 29.7806 30.0499C29.3471 30.2026 27.1727 29.8656 27.1857 29.6626C27.069 28.5423 25.5801 27.2938 25.5801 27.2938Z" fill="white"/>
+            <path d="M25.6364 26.8085C26.4452 26.8085 27.1008 26.136 27.1008 25.3065C27.1008 24.4771 26.4452 23.8046 25.6364 23.8046C24.8275 23.8046 24.1719 24.4771 24.1719 25.3065C24.1719 26.136 24.8275 26.8085 25.6364 26.8085Z" fill="#CCCCCC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6362 23.8046C25.2272 23.8046 24.8572 23.9789 24.5908 24.2568C24.5072 24.4454 24.4597 24.6542 24.4597 24.8745C24.4597 25.7025 25.1178 26.3765 25.9242 26.3765C26.3332 26.3765 26.7032 26.2022 26.9696 25.9229C27.0532 25.7342 27.1007 25.5254 27.1007 25.3051C27.0992 24.4785 26.4426 23.8046 25.6362 23.8046Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2376 32.1307C26.9323 32.5886 25.5268 33.9321 22.7635 32.8161C16.9603 30.4718 18.6408 35.5262 11.6395 33.3144C9.50107 32.639 7.27627 34.7155 7.27627 34.7155L7.19995 33.9523C11.6683 30.9081 11.3918 33.2841 14.6347 33.1891C15.9206 33.1516 17.6644 31.5475 19.6761 31.3171C21.6878 31.0881 22.7188 32.3107 24.4252 32.2588C26.1316 32.2084 26.8502 31.3473 27.0446 31.2077C27.2376 31.0665 27.3643 31.8499 27.2376 32.1307Z" fill="#606060"/>
+            <path d="M22.595 35.9827C21.564 37.6546 20.9909 39.3898 19.9598 41.0631C18.1785 41.8666 15.7046 45.4767 14.5886 47.232C15.5563 46.0296 17.3707 43.8394 18.3902 43.0243C19.8273 41.8752 20.5445 41.4446 20.5445 41.4446L23.6318 36.6278C23.2056 36.445 22.7937 36.216 22.595 35.9827Z" fill="#CCCCCC"/>
+            <defs>
+            <linearGradient id="paint0_linear_1924_29" x1="17.3413" y1="21.7505" x2="26.5124" y2="46.9054" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0112" stop-color="#3EB0CA"/>
+            <stop offset="0.5" stop-color="#0099B9"/>
+            <stop offset="0.9944" stop-color="#007C84"/>
+            </linearGradient>
+            </defs>
+            </svg>
+            
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Início</a>
+            </li>
+            <li><a onclick="closeMenu()" href="#benefits">Benefícios</a></li>
+            <li><a onclick="closeMenu()" href="#testimonials">Depoimentos</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Agendar caminhada</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com/">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BOAS-VINDAS A MOV  👋</h4>
+            <h1>Mov(a) a sua vida em direção a saúde!</h1>
+          </header>
+
+          <div class="content">
+            <p>
+              Junte-se ao nosso grupo de caminhada pela sua cidade, conhecendo melhor as belezas naturais que cercam você!
+            </p>
+            <a class="button" href="#contact">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z"
+                  fill="white"
+                />
+              </svg>
+
+              Agendar caminhada
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/desenho-homem-negro-caminhando-sorrindo.png"
+            alt="Desenho homem negro caminhando e sorrindo"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+2.000</h3>
+            <p>Caminhadas no Brasil</p>
+          </div>
+
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Cidades disponíveis</p>
+          </div>
+
+          <div class="stat">
+            <h3>+5</h3>
+            <p>Anos no mercado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="wrapper">
+        <header>
+          <h4>Benefícios</h4>
+          <h2>Como a caminhada pode te ajudar a se sentir melhor?</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Melhora a circulação</h3>
+              <p>
+                Caminhar 40 minutos é capaz de reduzir a pressão arterial durante 24 horas após o término do exercício.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Deixa o pulmão eficiente</h3>
+              <p>
+                As trocas gasosas que ocorrem no órgão se torna mais poderosas quando caminhamos com frequência.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Afasta a depressão</h3>
+              <p>
+                Quando uma pessoa começa a praticar exercícios, ela automaticamente produz endorfina.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Diminui a sonolência</h3>
+              <p>
+                deixa o corpo disposto após o exercício. a caminhada melhora a qualidade do sono de noite.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Ajuda a saciedade</h3>
+              <p>
+                A caminhada libera hormônios, que combatem o estresse, efeito que muitas pessoas buscam na comida
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Protege o coração</h3>
+              <p>
+                Por ajudar a controlar a pressão sanguínea, caminhar é um fator de proteção contra derrames e infarto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Sobre nós</h4>
+            <h2>Entenda quem somos e por que existimos</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              Nossa história começa quando vimos que grande parte das pessoas a nossa volta não praticavam uma atividade física, e tinham como desculpa a falta de pessoas para acompanhar, juntamos um grupo de amigos que foram crescendo cada vez mais, quando vimos, já eram quase 20 pessoas andando pela cidade, sempre tentando seguir trajetos e trilhas diferentes, para cada vez mais incentivar a ativade física e conhecer as belezas naturais da cidade, então, decidimos difundir nossa ideia para o Brasil! sejam bem-vindos a MOV!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/mulher-branca-de-patins-sorrindo,=.png"
+            alt="Mulher branca de patins sorrindo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="wrapper2">
+        <div class="wrapper">
+      
+              <header>
+                  <h4>Depoimentos</h4>
+                  <h2>Quem já andou com a gente recomenda =)</h2>
+                </header> 
+        </div>
+           
+              <div class="content">
+              <div class="testimonials swiper">
+                        <div class="swiper-wrapper">
+                        <div class="testimonial swiper-slide">
+                          <blockquote>
+                            
+                            <p>
+                                <span>&ldquo;
+                                </span>
+                                Conheci a MOV à 3 anos atrás, e foi uma mudança enorme na minha vida, conheci pessoas maravilhosas e bem mais sobre a cidade que fazia poucos meses que tinha me mudado, uma boa oportunidade para conhecer lugares lindos!
+                              </p>
+                                <cite>
+                                  <img src="./assets/fotos/LuanFilho.jpg" alt="">
+                                  Luan Filho
+                                </cite>
+                            
+                          </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                          <blockquote>
+                            
+                            <p>
+                              <span>&ldquo;
+                              </span>
+                                  Atenciosos e entenderam completamente meu caso, não saia de casa pois sempre estava atolada em trabalho, acompanharam meu ritmo, no começo caminhava 1km no máximo! hoje já consigo correr 10km tranquilo!
+                              </p>
+                                <cite>
+                                  <img src="./assets/fotos/13.jpg" alt="">
+                                  Patrícia Lucatti
+                                </cite>
+                            
+                          </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                          <blockquote>
+                            
+                            <p>
+                              <span>&ldquo;
+                              </span>
+                                </span>
+                              Conheci a pouco tempo, mas já é um lugar onde espero toda semana alguém marcar uma caminhadinha rsrs, caminhando e aprendendo muito mais sobre meu corpo e respiração, uma boa experiência de autoconhecimento.
+                              </p>
+                                <cite>
+                                  <img src="./assets/fotos/62.jpg" alt="">
+                                  lyara Silva
+                                </cite>
+                            
+                          </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                          <blockquote>
+                            
+                            <p>
+                              <span>&ldquo;
+                              </span>
+                                </span>
+                               Caminhar é maravilhoso, fala sériooo!! ainda mais com um grupo desse! galera animada, me apresentaram essa cidade linda, as trilhas, cachoeiras, um lugar lindo atrás do outro, mais uma vez valeu MOV!!!
+                              </p>
+                                <cite>
+                                  <img src="./assets/fotos/47.jpg" alt="">
+                                  André Jonas
+                                </cite>
+                            
+                          </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                          <blockquote>
+                            
+                            <p>
+                              <span>&ldquo;
+                              </span>
+                                </span>
+                               Agora o proximo passo é marcar aquela corridinha também em? hehehe muito bom participar desse grupo! ja viajei pra outros estados e participei de caminhadas por lá também! galera incrível, não importa a localização!!! kkkkk
+                              </p>
+                                <cite>
+                                  <img src="./assets/fotos/71.jpg" alt="">
+                                  Joh Silveira
+                                </cite>
+                            
+                          </blockquote>
+                        </div>
+
+              
+                      <div class="swiper-pagination"></div>
+           </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Entre em contato com a gente!</h2>
+          </header>
+
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                R. Ruan Camar, 122
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                contato@mov.com
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              href="https://wa.me/"
+              target="_blank"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                  fill="white"
+                />
+              </svg>
+
+              Agendar caminhada
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/mae-e-filho-caminhando-e-sorrindo.png"
+            alt="mãe e filho caminhando e sorrindo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.5729 40.0997L43.5614 35.1792L41.1479 39.2328H40.2926L37.8907 35.2844V40.0997H36.1094V31.8989H37.679L40.7476 36.9951L43.7702 31.8989H45.3283L45.3513 40.0997H43.5729V40.0997Z" fill="white"/>
+              <path d="M46.7827 36C46.7827 33.5635 48.6806 31.7592 51.2698 31.7592C53.8474 31.7592 55.7568 33.552 55.7568 36C55.7568 38.448 53.8474 40.2408 51.2698 40.2408C48.6806 40.2408 46.7827 38.4365 46.7827 36ZM53.8358 36C53.8358 34.4419 52.7342 33.3763 51.2698 33.3763C49.8053 33.3763 48.7037 34.4419 48.7037 36C48.7037 37.5581 49.8053 38.6237 51.2698 38.6237C52.7342 38.6237 53.8358 37.5581 53.8358 36Z" fill="white"/>
+              <path d="M64.8 31.9003L61.2504 40.1011H59.3755L55.8374 31.9003H57.888L60.3835 37.7583L62.9136 31.9003H64.8V31.9003Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.3085 26.7926C23.469 26.843 19.1994 27.7128 19.1994 27.7128C19.1994 27.7128 15.5979 31.9147 15.7376 31.8513C16.4216 31.5417 19.7883 29.0131 20.1541 28.859C20.4853 28.7193 22.8483 29.0275 23.5467 29.0275C24.2451 29.0304 24.981 26.83 24.3085 26.7926Z" fill="url(#paint0_linear_1924_29)"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.3085 26.7926C23.469 26.843 19.1994 27.7128 19.1994 27.7128C19.1994 27.7128 15.5979 31.9147 15.7376 31.8513C16.4216 31.5417 19.7883 29.0131 20.1541 28.859C20.4853 28.7193 22.8483 29.0275 23.5467 29.0275C24.2451 29.0304 24.981 26.83 24.3085 26.7926Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.5468 29.0289C23.8794 29.0289 24.2207 28.5292 24.4137 28.0008C24.405 27.9921 24.3993 27.9864 24.3993 27.9864L19.9684 27.9388L15.8025 31.8182V31.8196C16.6118 31.3977 19.797 29.0102 20.1527 28.8604C20.4854 28.7193 22.8484 29.0275 23.5468 29.0289Z" fill="#CCCCCC"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5124 33.526C25.4476 33.4713 25.3353 33.4008 25.1826 33.3302C24.6585 33.3849 24.1242 33.3273 23.6087 33.2006L23.2689 33.8745C24.5087 33.7377 25.5196 34.4044 25.5311 34.3396C25.5441 34.2662 25.5124 33.526 25.5124 33.526ZM23.099 33.0825C22.5374 33.179 21.9239 33.418 21.3047 33.886C16.9991 37.1419 17.4095 32.9673 12.8015 35.7192L12.9902 36.4593C13.3977 36.1339 13.8858 35.8012 14.6778 35.5982C15.7463 35.3246 17.8228 36.2606 19.535 35.9726C21.0527 35.7177 21.3782 34.6089 22.4193 34.1078L23.099 33.0825Z" fill="#606060"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6859 26.7969C25.2849 27.6206 24.5491 29.0721 23.6419 29.2795C24.1445 30.2169 24.0235 31.2365 23.7182 32.1019C23.9457 32.1422 24.1776 32.1609 24.4209 32.1537C25.0603 32.135 25.691 31.9953 26.2497 31.6742C26.4182 31.5777 26.5766 31.4669 26.7264 31.3416C26.8099 31.2725 26.8977 31.1832 26.9827 31.1213C27.0331 30.8419 27.0561 30.5683 27.0403 30.3105C26.9395 28.656 24.6859 26.7969 24.6859 26.7969ZM23.2632 33.1041C22.9896 33.5981 22.7174 33.9609 22.6094 34.1035C22.0723 34.812 22.6137 35.699 23.2358 36.1051C24.5923 36.9893 27.5256 37.0757 28.5667 37.044C25.6795 39.1968 25.1366 45.4838 25.1409 45.4752C27.5817 39.6173 30.4689 37.3982 30.6201 37.1232C31.5389 35.4384 26.1057 33.6398 25.6291 34.3094C25.6291 34.3094 25.9862 33.7565 26.3433 32.9976C26.2137 33.0624 26.0827 33.1185 25.9574 33.1617C25.0805 33.4627 24.1373 33.3749 23.2632 33.1041Z" fill="white"/>
+              <path d="M24.2669 33.3201C23.927 33.2812 23.5901 33.2049 23.2632 33.1041C22.9896 33.598 22.7174 33.9609 22.6094 34.1035C22.0723 34.812 22.6137 35.699 23.2358 36.1051C24.5923 36.9892 27.5256 37.0756 28.5667 37.044C25.7357 39.155 25.1597 45.2419 25.1409 45.468H25.1424C25.1424 45.468 26.4355 41.302 27.2966 39.7209C28.1592 38.1412 29.5949 36.8481 29.5949 36.8481C29.5949 36.8481 24.8544 36.1296 24.1358 35.411C23.7542 35.0265 23.9429 34.236 24.2669 33.3201Z" fill="#CCCCCC"/>
+              <path d="M23.6418 29.2795C24.1444 30.2169 24.0234 31.2364 23.7182 32.1019C23.9457 32.1422 24.1775 32.1609 24.4209 32.1537C24.5174 32.1508 24.6138 32.1436 24.7089 32.135C24.8759 31.6857 25.0343 31.2364 25.1409 30.8116C25.4274 29.6668 25.0055 28.7971 24.6916 28.342C24.4641 28.8014 24.0738 29.1816 23.6418 29.2795Z" fill="#CCCCCC"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5949 35.9827C23.0975 36.5717 24.9608 37.1333 25.0141 37.0008C25.0674 36.8683 21.5192 41.6074 20.6092 42.4872C19.7048 43.3627 14.7786 47.0837 14.0024 48.1911C13.8714 48.3783 17.5492 42.1503 19.9612 41.0616C20.9908 39.3898 21.5639 37.6546 22.5949 35.9827Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5801 27.2938C26.1906 27.5487 29.4119 28.7583 29.4119 28.7583C29.4119 28.7583 33.1041 25.7155 33.0278 25.8941C32.9514 26.0727 30.2126 29.8973 29.7806 30.0499C29.3471 30.2026 27.1727 29.8656 27.1857 29.6626C27.069 28.5423 25.5801 27.2938 25.5801 27.2938Z" fill="white"/>
+              <path d="M25.6364 26.8085C26.4452 26.8085 27.1008 26.136 27.1008 25.3065C27.1008 24.4771 26.4452 23.8046 25.6364 23.8046C24.8275 23.8046 24.1719 24.4771 24.1719 25.3065C24.1719 26.136 24.8275 26.8085 25.6364 26.8085Z" fill="#CCCCCC"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6362 23.8046C25.2272 23.8046 24.8572 23.9789 24.5908 24.2568C24.5072 24.4454 24.4597 24.6542 24.4597 24.8745C24.4597 25.7025 25.1178 26.3765 25.9242 26.3765C26.3332 26.3765 26.7032 26.2022 26.9696 25.9229C27.0532 25.7342 27.1007 25.5254 27.1007 25.3051C27.0992 24.4785 26.4426 23.8046 25.6362 23.8046Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2376 32.1307C26.9323 32.5886 25.5268 33.9321 22.7635 32.8161C16.9603 30.4718 18.6408 35.5262 11.6395 33.3144C9.50107 32.639 7.27627 34.7155 7.27627 34.7155L7.19995 33.9523C11.6683 30.9081 11.3918 33.2841 14.6347 33.1891C15.9206 33.1516 17.6644 31.5475 19.6761 31.3171C21.6878 31.0881 22.7188 32.3107 24.4252 32.2588C26.1316 32.2084 26.8502 31.3473 27.0446 31.2077C27.2376 31.0665 27.3643 31.8499 27.2376 32.1307Z" fill="#606060"/>
+              <path d="M22.595 35.9827C21.564 37.6546 20.9909 39.3898 19.9598 41.0631C18.1785 41.8666 15.7046 45.4767 14.5886 47.232C15.5563 46.0296 17.3707 43.8394 18.3902 43.0243C19.8273 41.8752 20.5445 41.4446 20.5445 41.4446L23.6318 36.6278C23.2056 36.445 22.7937 36.216 22.595 35.9827Z" fill="#CCCCCC"/>
+              <defs>
+              <linearGradient id="paint0_linear_1924_29" x1="17.3413" y1="21.7505" x2="26.5124" y2="46.9054" gradientUnits="userSpaceOnUse">
+              <stop offset="0.0112" stop-color="#3EB0CA"/>
+              <stop offset="0.5" stop-color="#0099B9"/>
+              <stop offset="0.9944" stop-color="#007C84"/>
+              </linearGradient>
+              </defs>
+              </svg>
+          </a>
+
+          <p>
+            ©2022 DoctorCare. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com/">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com/">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+
+    <!-- Swiper Lib -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
